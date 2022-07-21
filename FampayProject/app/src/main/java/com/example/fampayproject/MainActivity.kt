@@ -52,5 +52,5 @@ class MainActivity : AppCompatActivity() {
     private fun fetchResources(){
 
     }
-    
+
 }

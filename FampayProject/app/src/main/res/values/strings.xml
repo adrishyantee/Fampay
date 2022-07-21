@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FampayProject</string>
+    <string name="demo_name">Arya Stark</string>
+    <string name="demo_text">Small Display Card</string>
+    <string name="fampay">fampay</string>
+    <string name="retry">Retry</string>
 </resources>

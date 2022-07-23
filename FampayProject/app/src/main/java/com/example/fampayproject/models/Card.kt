@@ -1,6 +1,4 @@
-package com.example.fampayproject.api.models
-
-import retrofit2.http.GET
+package com.example.fampayproject.models
 
 data class Card(
     val bg_color: String,

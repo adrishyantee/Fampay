@@ -1,4 +1,13 @@
-package com.example.fampayproject.api.models
+package com.example.fampayproject.models
+
+enum class DesignTypes(s: String) {
+    SMALL_DISPLAY_CARD("HC1"),
+    BIG_DISPLAY_CARD("HC3"),
+    IMAGE_CARD("HC5"),
+    SMALL_CARD_WITH_ARROW("HC6"),
+    DYNAMIC_WIDTH_CARD("HC9"
+    )
+}
 
 data class CardGroup(
     val cards: List<Card>,
@@ -7,9 +16,5 @@ data class CardGroup(
     val id: Int,
     val is_scrollable: Boolean,
 
-//    val level:Int,
-
     val name: String
-){
-
-}
+)

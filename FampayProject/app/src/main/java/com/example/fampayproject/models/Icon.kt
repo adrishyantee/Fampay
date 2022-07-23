@@ -1,4 +1,4 @@
-package com.example.fampayproject.api.models
+package com.example.fampayproject.models
 
 data class Icon(
     val aspect_ratio: Int,

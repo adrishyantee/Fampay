@@ -1,4 +1,4 @@
-package com.example.fampayproject.api.models
+package com.example.fampayproject.models
 
 import com.google.gson.annotations.SerializedName
 

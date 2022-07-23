@@ -3,16 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ProjectsMade/MyProjects/Fampay/FampayProject/app/src/main/res/drawable/arrow_right.xml" value="0.26205128205128203" />
         <entry key="..\:/ProjectsMade/MyProjects/Fampay/FampayProject/app/src/main/res/drawable/rec_icon.xml" value="0.2222222222222222" />
         <entry key="..\:/ProjectsMade/MyProjects/Fampay/FampayProject/app/src/main/res/drawable/rounded_rec_bg.xml" value="0.21666666666666667" />
-        <entry key="..\:/ProjectsMade/MyProjects/Fampay/FampayProject/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/ProjectsMade/MyProjects/Fampay/FampayProject/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/ProjectsMade/MyProjects/Fampay/FampayProject/app/src/main/res/layout/hc1_layout.xml" value="0.264" />
         <entry key="..\:/ProjectsMade/MyProjects/Fampay/FampayProject/app/src/main/res/layout/hc2_layout.xml" value="0.17798913043478262" />
         <entry key="..\:/ProjectsMade/MyProjects/Fampay/FampayProject/app/src/main/res/layout/hc3_layout.xml" value="0.17798913043478262" />
         <entry key="..\:/ProjectsMade/MyProjects/Fampay/FampayProject/app/src/main/res/layout/hc5_layout.xml" value="0.17798913043478262" />
-        <entry key="..\:/ProjectsMade/MyProjects/Fampay/FampayProject/app/src/main/res/layout/hc6_layout.xml" value="0.17798913043478262" />
+        <entry key="..\:/ProjectsMade/MyProjects/Fampay/FampayProject/app/src/main/res/layout/hc6_layout.xml" value="0.264" />
         <entry key="..\:/ProjectsMade/MyProjects/Fampay/FampayProject/app/src/main/res/layout/hc9_layout.xml" value="0.17798913043478262" />
         <entry key="..\:/ProjectsMade/MyProjects/Fampay/FampayProject/app/src/main/res/layout/recycler_item.xml" value="0.1" />
+        <entry key="..\:/ProjectsMade/MyProjects/Fampay/FampayProject/app/src/main/res/xml/backup_rules.xml" value="0.11246200607902736" />
       </map>
     </option>
   </component>

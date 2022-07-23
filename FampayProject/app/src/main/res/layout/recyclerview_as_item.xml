@@ -2,15 +2,17 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp">
 
 <!--This is where we will show **each group** of the cards as item -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_as_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginHorizontal="6dp"
+        android:layout_marginBottom="2dp"
         android:background="@null"/>
 
 </RelativeLayout>

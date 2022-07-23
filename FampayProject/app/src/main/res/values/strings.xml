@@ -5,4 +5,10 @@
     <string name="fampay">fampay</string>
     <string name="retry">Retry</string>
     <string name="oops_try_again">Oops! Try Again</string>
+    <string name="dummy">Dummy</string>
+    <string name="description">Description</string>
+    <string name="key">Count</string>
+    <string name="apply">Apply</string>
+    <string name="remind_later">Remind later</string>
+    <string name="dismiss_now">Dismiss Now</string>
 </resources>

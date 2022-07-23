@@ -28,8 +28,10 @@
 - On tapping "dismiss now" action, it should be removed from the display. This card should never be visible again.
 
 ## 🖥️ Link for APK in the Repository:
+[Download the Apk Here.](https://github.com/adrishyantee/Fampay/blob/main/AppDemo/App.apk)
 
 ## 📽 Sample Demo:
+[The Working Prototype](https://github.com/adrishyantee/Fampay/blob/main/AppDemo/App.mp4)
 
 ## 🏗 Built With:
 - Android Studio.

@@ -29,9 +29,6 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-//        //initiliase the app preference with application
-        SharedPreferenceManager.init(this)
-
         // the functions once the activity is running
         createActivity()
     }
@@ -71,35 +68,33 @@ class MainActivity : AppCompatActivity() {
 
 
     //using Handlers Class
-        val handles = Handlers(binding)
+    val handles = Handlers(binding)
+        viewModel.getCardsList()
+            .observe(this, Observer {
+                it?.let { resource ->
+                    when (resource.status) {
 
-            viewModel.getCardsList()
-                .observe(this, Observer {
-                    it?.let { resource ->
-                        when (resource.status) {
-
-                            // when status is successful we pass the cardgroup array list to adapter
-                            Status.SUCCESS -> {
-                                handles.success()
-                                resource.data?.let { it ->
+                        // when status is successful we pass the cardgroup array list to adapter
+                        Status.SUCCESS -> {
+                            handles.success()
+                            resource.data?.let { it ->
                                     attachToAdapter(it.card_groups as ArrayList<CardGroup>)
-                                }
-                            }
-                            Status.LOADING -> {
-                                handles.loading();
-                            }
-                            Status.ERROR -> {
-                                handles.error()
-                                Toast.makeText(
-                                    this,
-                                    "Error! Connect to Internet",
-                                    Toast.LENGTH_LONG
-                                ).show()
                             }
                         }
+                        Status.LOADING -> {
+                            handles.loading();
+                        }
+                        Status.ERROR -> {
+                            handles.error()
+                            Toast.makeText(
+                                this,
+                                "Error! Connect to Internet",
+                                Toast.LENGTH_LONG
+                                ).show()
+                        }
                     }
-                })
-
+                }
+            })
     }
 
     //apply to the adapter

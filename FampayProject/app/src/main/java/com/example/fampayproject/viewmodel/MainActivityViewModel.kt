@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.example.fampayproject.api.handlers.CardGroupSource
-import com.example.fampayproject.utils.ResponseResource
+import com.example.fampayproject.api.handlers.ResponseResource
 import kotlinx.coroutines.Dispatchers
 
 class MainActivityViewModel(application: Application, private val cardGroupSource: CardGroupSource) : ViewModel(){

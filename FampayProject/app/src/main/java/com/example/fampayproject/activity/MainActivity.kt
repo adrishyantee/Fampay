@@ -11,8 +11,8 @@ import com.example.fampayproject.api.handlers.CardGroupSource
 import com.example.fampayproject.models.CardGroup
 import com.example.fampayproject.api.handlers.RetrofitClientInstance
 import com.example.fampayproject.databinding.ActivityMainBinding
-import com.example.fampayproject.utils.AppPreferences
-import com.example.fampayproject.utils.Status
+import com.example.fampayproject.utils.SharedPreferenceManager
+import com.example.fampayproject.api.handlers.Status
 import com.example.fampayproject.viewmodel.MainActivityViewModelFactory
 import com.example.fampayproject.viewmodel.MainActivityViewModel
 
@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        //initiliase the app preference with application
-        AppPreferences.init(application)
+//        //initiliase the app preference with application
+        SharedPreferenceManager.init(this)
 
         // the functions once the activity is running
         createActivity()
@@ -38,15 +38,13 @@ class MainActivity : AppCompatActivity() {
 
     //start the activity
     private fun createActivity() {
+
         //fetch resources from api
         fetchResources()
-
         //initialise the Recycler View
         initRecyclerView()
-
         //get the cards handle it and attach to Adapter
         getCardsGroupList()
-
         //keep on refreshing feature
         refreshRecyclerView()
     }
@@ -71,30 +69,37 @@ class MainActivity : AppCompatActivity() {
     // get the response , handle loading and error states and pass the cards list to the adapter
     private fun getCardsGroupList() {
 
-        //using Handlers Class
+
+    //using Handlers Class
         val handles = Handlers(binding)
 
-        viewModel.getCardsList()
-            .observe(this, Observer {
-            it?.let { resource -> when(resource.status){
+            viewModel.getCardsList()
+                .observe(this, Observer {
+                    it?.let { resource ->
+                        when (resource.status) {
 
-                    // when status is successful we pass the cardgroup array list to adapter
-                    Status.SUCCESS -> {
-                            handles.success()
-                            resource.data?.let{
-                                it -> attachToAdapter(it.card_groups as ArrayList<CardGroup>)
+                            // when status is successful we pass the cardgroup array list to adapter
+                            Status.SUCCESS -> {
+                                handles.success()
+                                resource.data?.let { it ->
+                                    attachToAdapter(it.card_groups as ArrayList<CardGroup>)
+                                }
+                            }
+                            Status.LOADING -> {
+                                handles.loading();
+                            }
+                            Status.ERROR -> {
+                                handles.error()
+                                Toast.makeText(
+                                    this,
+                                    "Error! Connect to Internet",
+                                    Toast.LENGTH_LONG
+                                ).show()
                             }
                         }
-                    Status.LOADING -> {
-                        handles.loading();
                     }
-                    Status.ERROR -> {
-                        handles.error()
-                        Toast.makeText(this,"Error! Connect to Internet",Toast.LENGTH_LONG).show()
-                    }
-                }
-            }
-        })
+                })
+
     }
 
     //apply to the adapter

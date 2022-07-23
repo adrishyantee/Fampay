@@ -22,12 +22,9 @@ import com.bumptech.glide.Glide
 import com.example.fampayproject.R
 
 import com.example.fampayproject.models.Card
-import com.example.fampayproject.models.FormattedTitle
-import retrofit2.http.Url
-import java.awt.font.TextAttribute.UNDERLINE
-import kotlin.collections.mapOf as mapOf
 
 class CardGroupAdapter(private val cards: ArrayList<Card>, private val type: Int, private val activity: Activity): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
@@ -95,7 +92,6 @@ class CardGroupAdapter(private val cards: ArrayList<Card>, private val type: Int
     private fun removeItem(position: Int) {
         cards.removeAt(position)
         notifyItemRemoved(position)
-        notifyItemRangeChanged(position, cards.size)
     }
 
 
@@ -138,6 +134,7 @@ class CardGroupAdapter(private val cards: ArrayList<Card>, private val type: Int
         val dismiss: LinearLayout = itemView.findViewById(R.id.dismiss_hc3)
         val button: Button = itemView.findViewById(R.id.action_hc3)
 
+
         //add a bind method
         fun bind(position: Int) {
             //set all attributes as per data received
@@ -149,7 +146,7 @@ class CardGroupAdapter(private val cards: ArrayList<Card>, private val type: Int
             util.formatText(item, title)
             util.formatDescription(item, desc)
             util.buttonChanges(item, button)
-            util.slidingFeature(position, itemView, sliding, remind, dismiss, relativeLayout)
+            util.slidingFeature(position, itemView, sliding, remind, dismiss, relativeLayout, item)
 
             //set background colour of relative layout
             relativeLayout.setBackgroundColor(Color.parseColor(item.bg_color))
@@ -229,7 +226,7 @@ class CardGroupAdapter(private val cards: ArrayList<Card>, private val type: Int
             sliding: LinearLayout,
             remind: LinearLayout,
             dismiss: LinearLayout,
-            relativeLayout: RelativeLayout
+            relativeLayout: RelativeLayout,item: Card
         ) {
 
             //<--DIFFERENT FEATURE-->slide to show the remove or dismiss feature
@@ -245,18 +242,18 @@ class CardGroupAdapter(private val cards: ArrayList<Card>, private val type: Int
             //clicklistener for remind
             remind.setOnClickListener {
                 removeItem(position)
-
-
                 relativeLayout.visibility = View.GONE
-                Toast.makeText(activity, "Remind Later", Toast.LENGTH_SHORT).show()
+
+                Toast.makeText(activity, "Will Remind Later!", Toast.LENGTH_SHORT).show()
             }
 
             //clicklistener for dismiss
             dismiss.setOnClickListener {
                 removeItem(position)
-
                 relativeLayout.visibility = View.GONE
-                Toast.makeText(activity, "Dismissed!", Toast.LENGTH_SHORT).show()
+
+                Toast . makeText (activity, "Dismissed!", Toast.LENGTH_SHORT
+                ).show()
             }
         }
 

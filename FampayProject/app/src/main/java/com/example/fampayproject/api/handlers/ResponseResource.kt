@@ -1,4 +1,4 @@
-package com.example.fampayproject.utils
+package com.example.fampayproject.api.handlers
 
 //enum class used as status of response
 enum class Status {

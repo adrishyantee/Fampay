@@ -1,5 +1,7 @@
 package com.example.fampayproject.api.models
 
+import retrofit2.http.GET
+
 data class Card(
     val bg_color: String,
     val bg_image: BgImage,
@@ -10,5 +12,8 @@ data class Card(
     val icon: Icon,
     val name: String,
     val title: String,
-    val url: String
+    val url: String,
+    val is_disabled:Boolean
 )
+
+//getter

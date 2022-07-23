@@ -22,7 +22,7 @@ class MainActivityViewModel(application: Application, private val cardGroupSourc
 
         } catch (exception: Exception){
 
-            //if error occured
+            //if error occurred
             emit(ResponseResource.error(data = null, message = exception.message ?: "Error!"))
         }
     }

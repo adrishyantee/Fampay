@@ -24,7 +24,7 @@ class CardGroupsAdapter(private val activity: Activity,private val cardGroups: A
 
     override fun onBindViewHolder(holder: CardGroupsAdapter.ViewHolder, position: Int) {
 
-        // get each card groups as a cardGroup class
+        // get each card groups as cardGroup
         val recyclerViewChild = cardGroups[position]
         val designType = recyclerViewChild.design_type
 
@@ -32,7 +32,7 @@ class CardGroupsAdapter(private val activity: Activity,private val cardGroups: A
         val checkDesignType = CheckDesignType()
         val cardGroupLayoutManager = checkDesignType.check(recyclerViewChild,designType,holder)
 
-        //set respective cardgroup adapters
+        //set respective cardGroup adapters
         setCardGroupAdapter(holder, cardGroupLayoutManager, designType, recyclerViewChild)
     }
 
@@ -49,7 +49,7 @@ class CardGroupsAdapter(private val activity: Activity,private val cardGroups: A
     }
 
 
-    //we will create children of each cardgroup and set it to the adapter
+    //we will create children of each cardGroup and set it to the adapter
     private fun setCardGroupAdapter(holder: ViewHolder, cardGroupLayoutManager: LinearLayoutManager, designType: String, recyclerViewChild: CardGroup){
         holder.recyclerView.apply {
             layoutManager = cardGroupLayoutManager

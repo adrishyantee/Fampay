@@ -1,6 +1,5 @@
 package com.example.fampayproject.adapters.typeUtils
 
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fampayproject.adapters.CardGroupsAdapter
 import com.example.fampayproject.models.CardGroup

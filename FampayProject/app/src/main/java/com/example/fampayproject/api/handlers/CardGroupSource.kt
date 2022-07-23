@@ -5,6 +5,7 @@ import com.example.fampayproject.models.CardGroups
 
 
 class CardGroupSource(private val cardgroups: CardGroupsInterface) {
+
     suspend fun getCardGroups(): CardGroups {
         return cardgroups.getCardGroups()
     }

@@ -29,9 +29,9 @@ object AppPreferences {
     }
 
     //removing cards
-    var removedCardsJson: String?
-        get() = preferences.getString(KEY, "")
-        set(value) = preferences.edit {
-            it.putString(KEY, value)
-        }
+//    var removedCardsJson: String?
+//        get() = preferences.getString(KEY, "")
+//        set(value) = preferences.edit {
+//            it.putString(KEY, value)
+//        }
 }

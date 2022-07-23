@@ -51,12 +51,12 @@ https://user-images.githubusercontent.com/73780844/180600487-bb287bf4-0a7e-416b-
 https://run.mocky.io/v3/04a04703-5557-4c84-a127-8c55335bb3b4
 
 ## 😓 Difficulties Faced:
-- Due to limited amount to time could implement the SharedPrefernces feature to save the list of items once dismiss button is tapped
+- Due to limited amount to time couldn't implement the SharedPrefernces feature to save the list of items once dismiss button is tapped
 
 ## 🪐 Steps to Build locally:
 - Clone with `git clone https://github.com/adrishyantee/Fampay`.
 - Open Android Studio IDE and open the file
-- Let the Gradle Sync happen auotmatically and the app is built.
+- Let the Gradle Sync happen automatically and the app is built.
 - Run on Android Emulator or Physical Device connected with USB.
 
 ## Developed With 💖 By:

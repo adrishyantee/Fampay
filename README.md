@@ -33,6 +33,10 @@
 ## 📽 Sample Demo:
 [The Working Prototype](https://github.com/adrishyantee/Fampay/blob/main/AppDemo/App.mp4)
 
+
+https://user-images.githubusercontent.com/73780844/180600487-bb287bf4-0a7e-416b-9268-73d65ec559e2.mp4
+
+
 ## 🏗 Built With:
 - Android Studio.
 - Kotlin.
@@ -55,5 +59,5 @@ https://run.mocky.io/v3/04a04703-5557-4c84-a127-8c55335bb3b4
 - Let the Gradle Sync happen auotmatically and the app is built.
 - Run on Android Emulator or Physical Device connected with USB.
 
-## 👦 Developed With 💖 By:
+## Developed With 💖 By:
 <h2 align="center">Adrishyantee Maiti</h2>
